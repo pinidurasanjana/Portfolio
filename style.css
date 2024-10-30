@@ -40,6 +40,7 @@ body{
     font-weight: 550;
     margin-left: 4rem;
     transition: .3s ease;
+    opacity: 0;
     animation: slideTop .5s ease forwards;
 }
 .main{
@@ -113,7 +114,10 @@ body{
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 18px;
-    
+}
+.btn-grp{
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
 }
 /*Nth-child Pseudo-class*/
 .btn-grp a:nth-of-type(2){
@@ -125,7 +129,7 @@ body{
 .main-section h3:nth-of-type(2){
     animation: slideTop 1s ease forwards;
 }
-img{
+.my-img img{
     border-radius: 50%;
     box-shadow: 0 0 5px aqua,
     0 0 25px aqua;
@@ -227,7 +231,9 @@ img{
 .navlist a:hover{
     color: aqua;
 }
-
+.navlist .active{
+    color: aqua;
+}
 .social-media-us i:hover{
     color: aqua;
 }
@@ -241,12 +247,16 @@ img{
     background-color: aqua;
     color: black;
 }
-img:hover{
+.my-img img:hover{
     box-shadow: 0 0 25px aqua,
     0 0 25px aqua;
     transform: scale(1.05);
 }
-
+@media (max-width:1000px){
+    .main img{
+        opacity: 0;
+    }
+}
 
 /*About Page*/
 .heading{
@@ -254,6 +264,7 @@ img:hover{
     font-size: 5rem;
     margin-bottom: 2rem;
     color: white;
+    opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 .intro-me{
@@ -264,10 +275,11 @@ img:hover{
     max-width: 1200px;
     margin: 0 auto;
     line-height: 1.6;
+    opacity: 0;
     animation: slideLeft 1s ease forwards;
 }
 .about-me{
-    padding: 7px 10% 0;
+    padding: 75px 15%;
 }
 .timeLine-items{
     max-width: 1200px;
@@ -368,6 +380,7 @@ img:hover{
     margin: 3rem 0;
     margin-bottom: 2rem;
     color: white;
+    opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 .technical-bar .bar{
@@ -445,4 +458,171 @@ img:hover{
     100%{
         transform: scaleY(1);
     }
+}
+
+
+
+/*Contact Page*/
+.contact{
+    position: relative;
+    padding: 75px 15%;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.content h2{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: white;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    max-width: 1200px;
+}  
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #121212;
+    border-radius: 50%;
+    border: 5px solid aqua;
+    font-size: 25px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+.text h3{
+    color: aqua;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    color: black;
+    border: 3px solid aqua;
+    border-radius: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #121212;
+    font-weight: 600;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: aqua;
+    color: #121212;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.contactInfo{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* @media (max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo,.contactForm{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}
+@media (max-width:909px) {
+    .navlist{
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+        padding: 80px 10% 0;
+    }
+    .social-media-us{
+        opacity: 0;
+    }
+} */
+
+
+/*Blog Page*/
+.blogs{
+    padding: 80px 15%;
+    color: white;
+}
+.blogs h2{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: white;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
