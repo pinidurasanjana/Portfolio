@@ -684,3 +684,11 @@
     left: calc(50% - 150px);
     align-items: center;
 }
+.topic1 .content .couple-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.topic1 .content .couple-img img{
+    padding-right: 20px;
+}
