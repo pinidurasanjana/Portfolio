@@ -3,11 +3,9 @@
     padding: 0;
     box-sizing: border-box;   
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, sans-serif;
-    
+    text-decoration: none;
 }
-body{
-    background: #121212;
-}
+
 
 /*Home Page*/
 .site-header{
@@ -27,16 +25,13 @@ body{
     font-weight: 630;
     font-size: 30px;
     color: #fff;
-    text-decoration: none;
     cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 .navlist a{
-    display: inline-block;
     font-size: 20px;
     color: #fff;
-    text-decoration: none;
     font-weight: 550;
     margin-left: 4rem;
     transition: .3s ease;
@@ -85,8 +80,6 @@ body{
 .social-media-us a{
     margin: 0.3em;
     font-size: 1.5em;
-    transition: transform 0.3s ease;
-    color: white;
 }
 /*Attribute Selectors*/
 .social-media-us a [class = "bi bi-github"]{
@@ -110,7 +103,6 @@ body{
     background-color: aqua;
     border-radius: 35px;
     color: #171515;
-    text-decoration: none;
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 18px;
@@ -280,6 +272,7 @@ body{
 }
 .about-me{
     padding: 75px 15%;
+    background: #121212;
 }
 .timeLine-items{
     max-width: 1200px;
@@ -356,17 +349,6 @@ body{
     font-weight: 400;
     line-height: 25px;
 }
-::-webkit-scrollbar{
-    width: 10px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: aqua;
-}
-::-webkit-scrollbar-track{
-    background-color: #121212;
-    width: 50px;
-}
-
 .skill-set{
     padding: 7px 10% 0;
     color: white;
@@ -470,7 +452,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    background: #121212;
 }
 .content h2{
     text-align: center;
@@ -617,6 +599,7 @@ body{
 .blogs{
     padding: 80px 15%;
     color: white;
+    background: #121212;
 }
 .blogs h2{
     text-align: center;
@@ -625,4 +608,79 @@ body{
     color: white;
     opacity: 0;
     animation: slideRight 1s ease forwards;
+}
+.blog-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.blog-item{
+    width: 350px;
+    background-color: #ffff;
+    border: 3px solid aqua;
+    margin: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.blog-content{
+    display: flex;
+    flex-direction: column;
+}
+.blog-content span{
+    color: red;
+    font-family: 'PT Sans';
+    padding: 5px;
+}
+.blog-content .topic{
+    font-size: 20px;
+    font-weight: 750;
+    padding: 5px;
+    color: black;
+}
+.blog-content p{
+    color: #121212;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.blog-content .more{
+    color: #121212;
+    font-size: 16px;
+    font-weight: 650;
+    padding: 5px;
+}
+
+.blog-content a:hover{
+    color: #4972ca;
+}
+
+
+/*Blog 1 Page*/
+.blog-1{
+    padding: 80px 15%;
+    color: white;
+}
+.blog-1 h2{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 2rem;
+    color: black;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+.topic1 .content{
+    background-color: #fff;
+    color: black;
+}
+.topic1 .content p{
+    font-size: 15px;
+    font-weight: 450;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+.books img{
+    position: relative;
+    left: calc(50% - 150px);
+    align-items: center;
 }
