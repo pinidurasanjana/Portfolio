@@ -635,6 +635,10 @@
 @media (max-width:435px){
     .contact{
         width: 100vh;
+        
+    }
+    .footer-contact{
+        width: 100vh;
     }
 }
 
@@ -781,6 +785,7 @@ footer {
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: aqua;
 }
 
 .footer-section p,
